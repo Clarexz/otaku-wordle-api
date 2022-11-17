@@ -1,1 +1,1 @@
-"# otaku-wordle" 
+"# otaku-wordle-api" 
