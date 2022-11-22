@@ -1,0 +1,31 @@
+{
+  "name": "otakunames",
+  "version": "1.0.0",
+  "description": "Character's anime names",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clarexz/otaku-wordle-api.git"
+  },
+  "keywords": [
+    "game",
+    "wordle",
+    "anime",
+    "otaku"
+  ],
+  "author": "Bryan Caleb Martinez Cavazos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clarexz/otaku-wordle-api/issues"
+  },
+  "homepage": "https://github.com/Clarexz/otaku-wordle-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
