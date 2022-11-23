@@ -7,6 +7,7 @@ module.exports = [
         5: One Piece
         6: Jujutsu Kaisen
         7: Kimetsu no Yaiba
+        8: Boku no Hero
     */
     {
         id: 1,
@@ -176,6 +177,33 @@ module.exports = [
             "Daki",
             "Gyutaro",
             "Rui"
+        ]
+    },
+    {
+        id: 8,
+        animeName: "Boku no Hero",
+        characters: [
+            "Midoriya",
+            "Uraraka",
+            "Bakugo",
+            "Aizawa",
+            "Todoroki",
+            "Asui",
+            "Shigaraki",
+            "Jiro",
+            "Ashido",
+            "Kaminari",
+            "All Might",
+            "Kirishima",
+            "Shinso",
+            "Togata",
+            "Tokoyami",
+            "Gran Torino",
+            "Twice",
+            "All For One",
+            "Hawks",
+            "Iida",
+            "Endeavor"
         ]
     }
 ]

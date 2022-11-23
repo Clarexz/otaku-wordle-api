@@ -1,7 +1,6 @@
-const express = require('express');
+const express = require('express')
 const app = express()
-const PORT = 3000;
-const names = require("./names");
+const names = require("./names")
 
 app.use(express.json())
 
@@ -18,4 +17,4 @@ app.get("/api/:id", (req, res) => {
     res.send(animeName)
 })
 
-app.listen(PORT)
+app.listen(process.env.PORT || 3000)
