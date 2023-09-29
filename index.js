@@ -1,20 +1,30 @@
-const express = require('express')
-const app = express()
-const names = require("./names")
 
-app.use(express.json())
+const express = require("express");
+const app = express();
+const cors = require("cors");
+
+app.use(cors());
+
+const port = 3000;
+const conexion = require("./database/connection.js");
+
+conexion();
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
+//Convertir body a objeto js
+app.use(express.json()); //Esto es para recibir datos con content-type app/json
+app.use(express.urlencoded({extended:true})); //Esto es para recibir datos con content-type app/x-www-form-urlencoded
 
 app.get("/", (req, res) => {
-    res.json(names)
+    return res.status(200).send(
+        "<h1>Empezando a crear una API Rest con Node</h1>"
+    )
 })
 
-//Get one anime
-app.get("/api/:id", (req, res) => {
-    const animeName = names.find(c => c.id === parseInt(req.params.id))
+//Rutas
+const rutas_anime = require("./routes/anime.js");
 
-    if(!animeName) { res.status(404).send("Anime name not found")}
-
-    res.send(animeName)
-})
-
-app.listen(process.env.PORT || 3000)
+app.use("/api", rutas_anime);
